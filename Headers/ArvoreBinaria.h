@@ -1,7 +1,7 @@
 #ifndef ARVOREBINARIA_H
 #define ARVOREBINARIA_H
-#include "NoArv.h"
 #pragma once
+#include "NoArv.h"
 
 class ArvoreBinaria
 {

@@ -45,7 +45,7 @@ void ArvoreBinaria::montaArvore(){
         raiz = auxMontaArvorePreO();
     }
 }
-auxBuscaPreOrd
+
 NoArv* ArvoreBinaria::auxMontaArvorePreO(){
     string linha;
     cin >> linha;
@@ -106,7 +106,7 @@ bool ArvoreBinaria::busca(int val){
     return auxBuscaPreOrd(raiz,val);
 }
 
-bool ArvoreBinaria::(NoArv *p, int val){
+bool ArvoreBinaria::auxBuscaPreOrd(NoArv *p, int val){
     if(p==NULL)
         return false;
     else if (p->getInfo() == val)
@@ -122,7 +122,7 @@ int ArvoreBinaria::altura(){
 }
 
 int ArvoreBinaria::auxAltura(NoArv*p){
-    if (p==NULL);
+    if (p==NULL)
         return -1;
     else{
         int he = auxAltura(p->getEsq());
