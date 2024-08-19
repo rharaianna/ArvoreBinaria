@@ -1,4 +1,5 @@
 #include "../Headers/ArvoreBinaria.h"
+#include "Headers/Fila.h"
 #include <iostream>
 #include <sstream>
 using namespace std;
@@ -132,5 +133,22 @@ int ArvoreBinaria::auxAltura(NoArv*p){
         else
             return 1 + hd;
     }
+}
 
+void ArvoreBinaria::percursoLargura(){
+    if(raiz!=NULL){
+        NoArv *p;
+        Fila f;
+        f.enfileira(raiz);
+        while (!f.vazia())
+        {
+            p = f.desenfileira();
+            cout<< p->getInfo()<<endl;
+            if(p->getEsq()!=NULL)
+                f.enfileira(p->getEsq());
+            if(p->getDir() !=NULL )
+                f.enfileira(p->getDir());
+        }
+        
+    }
 }

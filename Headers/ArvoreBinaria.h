@@ -16,6 +16,7 @@ public:
     void montaArvore();
     void insere(int val);
     int altura();
+    void percursoLargura();
 
 private:
     NoArv* raiz;
